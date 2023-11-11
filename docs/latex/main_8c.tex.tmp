@@ -1,0 +1,143 @@
+\hypertarget{main_8c}{}\doxysection{Référence du fichier main.\+c}
+\label{main_8c}\index{main.c@{main.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ncurses/ncurses.\+h$>$}\newline
+Graphe des dépendances par inclusion de main.\+c\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structPlayer}{Player}}
+\item 
+struct \mbox{\hyperlink{structTabCaisse}{Tab\+Caisse}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{main_8c_a3b94af9dcb0358f28d175d80eed98330}{MAX\+\_\+\+ROWS}}~100
+\item 
+\#define \mbox{\hyperlink{main_8c_a551f71f92f90f76151a3cfc9679271a0}{MAX\+\_\+\+COLS}}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Définitions de type}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structPlayer}{Player}} \mbox{\hyperlink{main_8c_aea762debd5be6a5b059b804a29be569c}{Caisse}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_abbc0e229239cf40c6766eccb1009d3cc}{Refresh\+Tab}} (char level\mbox{[}\mbox{\hyperlink{main_8c_a3b94af9dcb0358f28d175d80eed98330}{MAX\+\_\+\+ROWS}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a551f71f92f90f76151a3cfc9679271a0}{MAX\+\_\+\+COLS}}\mbox{]}, int rows, int cols, \mbox{\hyperlink{structPlayer}{Player}} player, \mbox{\hyperlink{structTabCaisse}{Tab\+Caisse}} tab\+Caisse)
+\begin{DoxyCompactList}\small\item\em Rafraîchit l\textquotesingle{}affichage du tableau de jeu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_adc5bc9c6ea6fb1bbd95369205c26f44f}{peut\+Bouger\+Caisse}} (char level\mbox{[}\mbox{\hyperlink{main_8c_a3b94af9dcb0358f28d175d80eed98330}{MAX\+\_\+\+ROWS}}\mbox{]}\mbox{[}\mbox{\hyperlink{main_8c_a551f71f92f90f76151a3cfc9679271a0}{MAX\+\_\+\+COLS}}\mbox{]}, int rows, int cols, \mbox{\hyperlink{structPlayer}{Player}} player, \mbox{\hyperlink{structTabCaisse}{Tab\+Caisse}} tab\+Caisse, int x, int y)
+\begin{DoxyCompactList}\small\item\em Vérifie si la caisse peut être déplacée à la nouvelle position. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Fonction principale du jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8c_ab35f53e4b6c6cad5ae6a18990c961e99}{Jeu}} = 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentation des macros}
+\mbox{\Hypertarget{main_8c_a551f71f92f90f76151a3cfc9679271a0}\label{main_8c_a551f71f92f90f76151a3cfc9679271a0}} 
+\index{main.c@{main.c}!MAX\_COLS@{MAX\_COLS}}
+\index{MAX\_COLS@{MAX\_COLS}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_COLS}{MAX\_COLS}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+COLS~100}
+
+\mbox{\Hypertarget{main_8c_a3b94af9dcb0358f28d175d80eed98330}\label{main_8c_a3b94af9dcb0358f28d175d80eed98330}} 
+\index{main.c@{main.c}!MAX\_ROWS@{MAX\_ROWS}}
+\index{MAX\_ROWS@{MAX\_ROWS}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{MAX\_ROWS}{MAX\_ROWS}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+ROWS~100}
+
+
+
+\doxysubsection{Documentation des définitions de type}
+\mbox{\Hypertarget{main_8c_aea762debd5be6a5b059b804a29be569c}\label{main_8c_aea762debd5be6a5b059b804a29be569c}} 
+\index{main.c@{main.c}!Caisse@{Caisse}}
+\index{Caisse@{Caisse}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Caisse}{Caisse}}
+{\footnotesize\ttfamily typedef  struct \mbox{\hyperlink{structPlayer}{Player}} \mbox{\hyperlink{main_8c_aea762debd5be6a5b059b804a29be569c}{Caisse}}}
+
+
+
+\doxysubsection{Documentation des fonctions}
+\mbox{\Hypertarget{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Fonction principale du jeu. 
+
+\begin{DoxyReturn}{Renvoie}
+0 si le jeu s\textquotesingle{}est terminé normalement. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_adc5bc9c6ea6fb1bbd95369205c26f44f}\label{main_8c_adc5bc9c6ea6fb1bbd95369205c26f44f}} 
+\index{main.c@{main.c}!peutBougerCaisse@{peutBougerCaisse}}
+\index{peutBougerCaisse@{peutBougerCaisse}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{peutBougerCaisse()}{peutBougerCaisse()}}
+{\footnotesize\ttfamily int peut\+Bouger\+Caisse (\begin{DoxyParamCaption}\item[{char}]{level\mbox{[}\+MAX\+\_\+\+ROWS\mbox{]}\mbox{[}\+MAX\+\_\+\+COLS\mbox{]},  }\item[{int}]{rows,  }\item[{int}]{cols,  }\item[{\mbox{\hyperlink{structPlayer}{Player}}}]{player,  }\item[{\mbox{\hyperlink{structTabCaisse}{Tab\+Caisse}}}]{tab\+Caisse,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Vérifie si la caisse peut être déplacée à la nouvelle position. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em level} & Tableau représentant le niveau. \\
+\hline
+{\em rows} & Nombre de lignes dans le tableau. \\
+\hline
+{\em cols} & Nombre de colonnes dans le tableau. \\
+\hline
+{\em player} & Structure représentant le joueur. \\
+\hline
+{\em tab\+Caisse} & Tableau de structures représentant les caisses. \\
+\hline
+{\em x} & Nouvelle position en colonne. \\
+\hline
+{\em y} & Nouvelle position en ligne. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si la caisse peut être déplacée, 0 sinon. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{main_8c_abbc0e229239cf40c6766eccb1009d3cc}\label{main_8c_abbc0e229239cf40c6766eccb1009d3cc}} 
+\index{main.c@{main.c}!RefreshTab@{RefreshTab}}
+\index{RefreshTab@{RefreshTab}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{RefreshTab()}{RefreshTab()}}
+{\footnotesize\ttfamily void Refresh\+Tab (\begin{DoxyParamCaption}\item[{char}]{level\mbox{[}\+MAX\+\_\+\+ROWS\mbox{]}\mbox{[}\+MAX\+\_\+\+COLS\mbox{]},  }\item[{int}]{rows,  }\item[{int}]{cols,  }\item[{\mbox{\hyperlink{structPlayer}{Player}}}]{player,  }\item[{\mbox{\hyperlink{structTabCaisse}{Tab\+Caisse}}}]{tab\+Caisse }\end{DoxyParamCaption})}
+
+
+
+Rafraîchit l\textquotesingle{}affichage du tableau de jeu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em level} & Tableau représentant le niveau. \\
+\hline
+{\em rows} & Nombre de lignes dans le tableau. \\
+\hline
+{\em cols} & Nombre de colonnes dans le tableau. \\
+\hline
+{\em player} & Structure représentant le joueur. \\
+\hline
+{\em tab\+Caisse} & Tableau de structures représentant les caisses. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentation des variables}
+\mbox{\Hypertarget{main_8c_ab35f53e4b6c6cad5ae6a18990c961e99}\label{main_8c_ab35f53e4b6c6cad5ae6a18990c961e99}} 
+\index{main.c@{main.c}!Jeu@{Jeu}}
+\index{Jeu@{Jeu}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Jeu}{Jeu}}
+{\footnotesize\ttfamily int Jeu = 1}
+
