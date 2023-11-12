@@ -1,0 +1,338 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sokoban Projet : Kylian / Karim / Yigit: Référence du fichier main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Sokoban Projet : Kylian / Karim / Yigit
+   </div>
+   <div id="projectbrief">Ce projet est un jeu de sokoban en C réaliser par 3 étudiants en relation avec la matière TechDev S3.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle">
+<div class="title">Référence du fichier main.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;ncurses/ncurses.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Graphe des dépendances par inclusion de main.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="main_8c__incl.png" border="0" usemap="#amain_8c" alt=""/></div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structPlayer.html">Player</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTabCaisse.html">TabCaisse</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a3b94af9dcb0358f28d175d80eed98330"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a3b94af9dcb0358f28d175d80eed98330">MAX_ROWS</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:a3b94af9dcb0358f28d175d80eed98330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a551f71f92f90f76151a3cfc9679271a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a551f71f92f90f76151a3cfc9679271a0">MAX_COLS</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:a551f71f92f90f76151a3cfc9679271a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:aea762debd5be6a5b059b804a29be569c"><td class="memItemLeft" align="right" valign="top">typedef struct <a class="el" href="structPlayer.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aea762debd5be6a5b059b804a29be569c">Caisse</a></td></tr>
+<tr class="separator:aea762debd5be6a5b059b804a29be569c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:abbc0e229239cf40c6766eccb1009d3cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#abbc0e229239cf40c6766eccb1009d3cc">RefreshTab</a> (char level[<a class="el" href="main_8c.html#a3b94af9dcb0358f28d175d80eed98330">MAX_ROWS</a>][<a class="el" href="main_8c.html#a551f71f92f90f76151a3cfc9679271a0">MAX_COLS</a>], int rows, int cols, <a class="el" href="structPlayer.html">Player</a> player, <a class="el" href="structTabCaisse.html">TabCaisse</a> tabCaisse)</td></tr>
+<tr class="memdesc:abbc0e229239cf40c6766eccb1009d3cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rafraîchit l'affichage du tableau de jeu.  <a href="main_8c.html#abbc0e229239cf40c6766eccb1009d3cc">Plus de détails...</a><br /></td></tr>
+<tr class="separator:abbc0e229239cf40c6766eccb1009d3cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc5bc9c6ea6fb1bbd95369205c26f44f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#adc5bc9c6ea6fb1bbd95369205c26f44f">peutBougerCaisse</a> (char level[<a class="el" href="main_8c.html#a3b94af9dcb0358f28d175d80eed98330">MAX_ROWS</a>][<a class="el" href="main_8c.html#a551f71f92f90f76151a3cfc9679271a0">MAX_COLS</a>], int rows, int cols, <a class="el" href="structPlayer.html">Player</a> player, <a class="el" href="structTabCaisse.html">TabCaisse</a> tabCaisse, int x, int y)</td></tr>
+<tr class="memdesc:adc5bc9c6ea6fb1bbd95369205c26f44f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vérifie si la caisse peut être déplacée à la nouvelle position.  <a href="main_8c.html#adc5bc9c6ea6fb1bbd95369205c26f44f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:adc5bc9c6ea6fb1bbd95369205c26f44f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
+<tr class="memdesc:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction principale du jeu.  <a href="main_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:ab35f53e4b6c6cad5ae6a18990c961e99"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab35f53e4b6c6cad5ae6a18990c961e99">Jeu</a> = 1</td></tr>
+<tr class="separator:ab35f53e4b6c6cad5ae6a18990c961e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentation des macros</h2>
+<a id="a551f71f92f90f76151a3cfc9679271a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a551f71f92f90f76151a3cfc9679271a0">&#9670;&nbsp;</a></span>MAX_COLS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_COLS&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3b94af9dcb0358f28d175d80eed98330"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b94af9dcb0358f28d175d80eed98330">&#9670;&nbsp;</a></span>MAX_ROWS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_ROWS&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des définitions de type</h2>
+<a id="aea762debd5be6a5b059b804a29be569c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea762debd5be6a5b059b804a29be569c">&#9670;&nbsp;</a></span>Caisse</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef  struct <a class="el" href="structPlayer.html">Player</a> <a class="el" href="main_8c.html#aea762debd5be6a5b059b804a29be569c">Caisse</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des fonctions</h2>
+<a id="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&nbsp;</a></span>main()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int main </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction principale du jeu. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>0 si le jeu s'est terminé normalement. </dd></dl>
+
+</div>
+</div>
+<a id="adc5bc9c6ea6fb1bbd95369205c26f44f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc5bc9c6ea6fb1bbd95369205c26f44f">&#9670;&nbsp;</a></span>peutBougerCaisse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int peutBougerCaisse </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>level</em>[MAX_ROWS][MAX_COLS], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPlayer.html">Player</a>&#160;</td>
+          <td class="paramname"><em>player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structTabCaisse.html">TabCaisse</a>&#160;</td>
+          <td class="paramname"><em>tabCaisse</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vérifie si la caisse peut être déplacée à la nouvelle position. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>Tableau représentant le niveau. </td></tr>
+    <tr><td class="paramname">rows</td><td>Nombre de lignes dans le tableau. </td></tr>
+    <tr><td class="paramname">cols</td><td>Nombre de colonnes dans le tableau. </td></tr>
+    <tr><td class="paramname">player</td><td>Structure représentant le joueur. </td></tr>
+    <tr><td class="paramname">tabCaisse</td><td>Tableau de structures représentant les caisses. </td></tr>
+    <tr><td class="paramname">x</td><td>Nouvelle position en colonne. </td></tr>
+    <tr><td class="paramname">y</td><td>Nouvelle position en ligne. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>1 si la caisse peut être déplacée, 0 sinon. </dd></dl>
+
+</div>
+</div>
+<a id="abbc0e229239cf40c6766eccb1009d3cc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc0e229239cf40c6766eccb1009d3cc">&#9670;&nbsp;</a></span>RefreshTab()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RefreshTab </td>
+          <td>(</td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>level</em>[MAX_ROWS][MAX_COLS], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cols</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structPlayer.html">Player</a>&#160;</td>
+          <td class="paramname"><em>player</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structTabCaisse.html">TabCaisse</a>&#160;</td>
+          <td class="paramname"><em>tabCaisse</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rafraîchit l'affichage du tableau de jeu. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td>Tableau représentant le niveau. </td></tr>
+    <tr><td class="paramname">rows</td><td>Nombre de lignes dans le tableau. </td></tr>
+    <tr><td class="paramname">cols</td><td>Nombre de colonnes dans le tableau. </td></tr>
+    <tr><td class="paramname">player</td><td>Structure représentant le joueur. </td></tr>
+    <tr><td class="paramname">tabCaisse</td><td>Tableau de structures représentant les caisses. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a id="ab35f53e4b6c6cad5ae6a18990c961e99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab35f53e4b6c6cad5ae6a18990c961e99">&#9670;&nbsp;</a></span>Jeu</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Jeu = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
