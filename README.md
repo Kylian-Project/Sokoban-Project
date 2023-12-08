@@ -1,5 +1,4 @@
-
-# Sokoban project | Tech Dev
+# Sokoban project | Tech Dev 0.8
 Sokoban est un projet de Tech Dev L2S3 réaliser en C.  
 Ce projet à pour but d'apprendre les bonnes pratiques vue en cours lors de la création d'un projet tout seul ou en équipe.
 
