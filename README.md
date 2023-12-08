@@ -10,11 +10,6 @@ Le but du jeux et de placer les caisses (C) sur les cibles (o) uniquement en les
 Le jeu n'est pas terminé et donc le code et encore brouillon !!
 Les fichiers .h ne sont pas encore répartis.
 
-## Répartition du travail première échéance
-- Karim -> Makefile / fonction dans le main.c
-- Yigit -> Doxygen / fonction dans le main.c
-- Kylian -> Readme / fonction dans le main.c
-
 ## Auteurs
 
 - [@khafdi](https://git.unistra.fr/khafdi)
