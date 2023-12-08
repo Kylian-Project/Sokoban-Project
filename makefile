@@ -20,4 +20,10 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADERS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJ_DIR)/*.o $(EXEC) -r $(BIN_DIR) $(OBJ_DIR)
+	rm -f $(OBJ_DIR)/*.o $(EXEC) -r $(BIN_DIR) $(OBJ_DIR) docs
+
+archive:
+	tar -cvzf $(BIN_DIR)/sokoban.tar.gz $(SRC_DIR) $(HEADERS) data makefile README.md Doxyfile
+
+doc:
+	doxygen Doxyfile
