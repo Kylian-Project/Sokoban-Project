@@ -2,12 +2,12 @@
  * @file main.c
  * @brief Fichier contenant la fonction main qui appelle le menu.
  */
-#include "../include/jeu.h"
+
+#include "../include/menu.h"
 
 int main(){
 
-    startGame(1); // argument 1 pour 1.txt / nom du niveau
-    printf("Fin du jeu\n");
+    menu();
 
     return 0;
 }
