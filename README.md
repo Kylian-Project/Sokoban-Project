@@ -1,4 +1,3 @@
-
 # Sokoban project | Tech Dev 1.0
 Sokoban est un projet de Tech Dev L2S3 réaliser en C.  
 Ce projet à pour but d'apprendre les bonnes pratiques vue en cours lors de la création d'un projet seul ou en équipe.
@@ -31,6 +30,12 @@ Puis ce rendre dans le dossier `/bin` et le lancer avec `./sokoban`
 Dans ce jeu vous avez 4 niveaux à votre disposition de base.  
 Vous pouvez lancer ces niveaux 1 par 1 simplement en choisissant **Lancer le jeu**.  
 Vous pouvez également lancer celui que vous voulez en choisissant **Selectionner un niveau**.
+
+### Touches
+
+| Haut | Bas | Gauche | Droite |Quitter Niveau|
+| - | - | - | - | - |
+| Z | S | Q | D | C |
 
 ### Ajouter des niveaux personalisé
 Il est également possible d'ajouter vos propres niveaux.
