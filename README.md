@@ -4,6 +4,7 @@ Ce projet à pour but d'apprendre les bonnes pratiques vue en cours lors de la c
 
 ### Règles du jeu
 Le but du jeux et de placer les caisses (C) sur les cibles (o) uniquement en les poussant avec le joueur (P). Il n'est pas possible de tirer les caisses.
+
 ## Installation / Execution
 
 **Prérequis :** Le jeu utilise `ncurses` donc il doit être installer sur votre machine.
@@ -25,6 +26,14 @@ Puis ce rendre dans le dossier `/bin` et le lancer avec `./sokoban`
 ```bash
   make clean
 ```
+
+**Prérequis :** Assurez vous d'avoir `doxygen` et `graphviz` sur votre machine.
+
+#### Crée une doc :
+```bash
+  make doc
+```
+
 ## Utilisation
 
 Dans ce jeu vous avez 4 niveaux à votre disposition de base.  
