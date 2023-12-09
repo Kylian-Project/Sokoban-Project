@@ -33,9 +33,9 @@ Vous pouvez également lancer celui que vous voulez en choisissant **Selectionne
 
 ### Touches
 
-| Haut | Bas | Gauche | Droite |
-| - | - | - | - |
-| Z | S | Q | D |
+| Haut | Bas | Gauche | Droite |Quitter Niveau|
+| - | - | - | - | - |
+| Z | S | Q | D | C |
 
 ### Ajouter des niveaux personalisé
 Il est également possible d'ajouter vos propres niveaux.
