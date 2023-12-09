@@ -51,9 +51,17 @@ void showLevelMenu(char *levelDir) {
     getmaxyx(stdscr, terminal_height, terminal_width);
 
     // Définir les dimensions de la sous-fenêtre
-    int starty = (terminal_height - 9) / 2;  // Centrer verticalement
+    int starty;
     int startx = (terminal_width - 30) / 2;  // Centrer horizontalement
-    int height = 9, width = 30;
+    int height, width;
+
+    if (numLevels >= 7) {
+        starty = (terminal_height - 9) / 2;  // Centrer verticalement
+        height = 9, width = 30;
+    } else {
+        starty = (terminal_height - numLevels - 3) / 2;  // Centrer verticalement
+        height = numLevels + 3, width = 30;
+    }
 
     // Créer une sous-fenêtre pour le sous-menu
     WINDOW *level_menu_win = newwin(height, width, starty, startx);
