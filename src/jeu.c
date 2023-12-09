@@ -1,53 +1,34 @@
+/**
+ * @file jeu.c
+ * @brief Fichier contenant les fonctions pour le jeu.
+ */
+
 #include "../include/jeu.h"
 
-#include <string.h>
+int Jeu;
+Player player;
+TabCaisse tabCaisse;
 
 
-int Jeu = 1;
+int startGame(int Niveau) {
+    
+    Jeu = 1;
 
-/**
- * @brief Fonction principale du jeu.
- */
-int startGame() {
-    FILE* fp = fopen("../data/lvl/1.txt", "r");
-    if (fp == NULL) {
-        printf("Error opening file\n");
+    char level[MAX_ROWS][MAX_COLS] = {0};
+    int rows, cols = 0;
+
+    if (loadLevel(Niveau, level, &rows, &cols) != 0) {
+        // Gestion de l'erreur, quitter le jeu
         return 1;
     }
 
-    // Lis le fichier et le met dans un tableau à 2 dimensions
-    char level[MAX_ROWS][MAX_COLS];
-    int rows = 0, cols = 0;
-    int c;  // Variable pour stocker le caractère lu
-
-    while ((c = fgetc(fp)) != EOF && rows < MAX_ROWS - 1 && cols < MAX_COLS - 1) {
-        if (c == '\n') {
-            level[rows][cols] = '\n';  // Ajoute passage de ligne au tableau
-            cols = 0;
-            rows++;
-        } else {
-            level[rows][cols] = (char)c;
-            cols++;
-        }
-    }
-
-    // Assurez-vous que la dernière ligne est correctement terminée par un caractère nul
-    if (cols > 0 && rows < MAX_ROWS - 1) {
-        level[rows][cols] = '\0';
-    }
-
-    // Ferme le fichier
-    fclose(fp);
-
     cols = strlen(level[0]); // On récupère le nombre de colonnes de la première ligne
-    Player player = {1, 1};
-    TabCaisse tabCaisse = {{ {7, 2}, {5, 5}, {14, 4} }};
 
     initscr();
     noecho(); // désative print de chaque entrée
     curs_set(0); // désactive curseur du cmd
 
-    // Affiche le tableau
+    // Affiche le tableau au debut du jeu
     RefreshTab(level, rows, cols, player, tabCaisse);
 
     while (Jeu) {
@@ -58,10 +39,10 @@ int startGame() {
                 // Si la case au-dessus du joueur n'est pas un mur
                 if (level[player.y - 1][player.x] != '#') {
                     // Vérifie si une caisse se trouve sur la case suivante
-                    for (int i = 0; i < 3; i++) {
+                    for (int i = 0; i < nbCaisse; i++) {
                         if (tabCaisse.caisse[i].x == player.x && tabCaisse.caisse[i].y == player.y - 1) {
                             // Si la caisse peut être déplacée, la déplace
-                            if (peutBougerCaisse(level, rows, cols, player, tabCaisse, player.x, player.y - 2)) {
+                            if (peutBougerCaisse(level, tabCaisse, player.x, player.y - 2)) {
                                 tabCaisse.caisse[i].y--;
                             }
                             else{
@@ -79,10 +60,10 @@ int startGame() {
                 // Si la case à gauche du joueur n'est pas un mur
                 if (level[player.y][player.x - 1] != '#') {
                     // Vérifie si une caisse se trouve sur la case suivante
-                    for (int i = 0; i < 3; i++) {
+                    for (int i = 0; i < nbCaisse; i++) {
                         if (tabCaisse.caisse[i].x == player.x - 1 && tabCaisse.caisse[i].y == player.y) {
                             // Si la caisse peut être déplacée, la déplace
-                            if (peutBougerCaisse(level, rows, cols, player, tabCaisse, player.x - 2, player.y)) {
+                            if (peutBougerCaisse(level, tabCaisse, player.x - 2, player.y)) {
                                 tabCaisse.caisse[i].x--;
                             }
                             else{
@@ -100,10 +81,10 @@ int startGame() {
                 // Si la case en-dessous du joueur n'est pas un mur
                 if (level[player.y + 1][player.x] != '#') {
                     // Vérifie si une caisse se trouve sur la case suivante
-                    for (int i = 0; i < 3; i++) {
+                    for (int i = 0; i < nbCaisse; i++) {
                         if (tabCaisse.caisse[i].x == player.x && tabCaisse.caisse[i].y == player.y + 1) {
                             // Si la caisse peut être déplacée, la déplace
-                            if (peutBougerCaisse(level, rows, cols, player, tabCaisse, player.x, player.y + 2)) {
+                            if (peutBougerCaisse(level, tabCaisse, player.x, player.y + 2)) {
                                 tabCaisse.caisse[i].y++;
                             }
                             else{
@@ -121,10 +102,10 @@ int startGame() {
                 // Si la case à droite du joueur n'est pas un mur
                 if (level[player.y][player.x + 1] != '#') {
                     // Vérifie si une caisse se trouve sur la case suivante
-                    for (int i = 0; i < 3; i++) {
+                    for (int i = 0; i < nbCaisse; i++) {
                         if (tabCaisse.caisse[i].x == player.x + 1 && tabCaisse.caisse[i].y == player.y) {
                             // Si la caisse peut être déplacée, la déplace
-                            if (peutBougerCaisse(level, rows, cols, player, tabCaisse, player.x + 2, player.y)) {
+                            if (peutBougerCaisse(level, tabCaisse, player.x + 2, player.y)) {
                                 tabCaisse.caisse[i].x++;
                             }
                             else{
@@ -138,12 +119,19 @@ int startGame() {
                     }
                 }
                 break;
+            case 'c':
+                // Quitte le jeu
+                Jeu = 0;
+                break;
             default:
                 break;
         }
         // Met à jour l'affichage du tableau de jeu
         RefreshTab(level, rows, cols, player, tabCaisse);
     }
+
+    clear();
+    refresh();
     
     endwin();
     return 0;
