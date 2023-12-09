@@ -1,15 +1,12 @@
-#include "../include/jeuUtils.h"
-
-
 /**
- * @brief Rafraîchit l'affichage du tableau de jeu.
- *
- * @param level Tableau représentant le niveau.
- * @param rows Nombre de lignes dans le tableau.
- * @param cols Nombre de colonnes dans le tableau.
- * @param player Structure représentant le joueur.
- * @param tabCaisse Tableau de structures représentant les caisses.
+ * @file jeuUtils.c
+ * @brief Fichier contenant les fonctions supplémentaire dont la modification du tableau pour le jeu.
  */
+
+#include "../include/jeuUtils.h"
+#include "../include/loadLvl.h"
+
+
 void RefreshTab(char level[MAX_ROWS][MAX_COLS], int rows, int cols, Player player, TabCaisse tabCaisse){
     clear();
     int isCaisse = 0;
@@ -19,7 +16,7 @@ void RefreshTab(char level[MAX_ROWS][MAX_COLS], int rows, int cols, Player playe
     for (int i = 0; i <= rows; i++) {
         for (int j = 0; j < cols; j++) {
             isCaisse = 0;
-            for (int k = 0; k < 3; k++){
+            for (int k = 0; k < nbCaisse; k++){
                 if (i == tabCaisse.caisse[k].y && j == tabCaisse.caisse[k].x) {
                     printw("C");
                     isCaisse = 1;
@@ -46,24 +43,13 @@ void RefreshTab(char level[MAX_ROWS][MAX_COLS], int rows, int cols, Player playe
     }
     refresh();
     if (nbCible == nbCibleValide){
-        printf("Vous avez gagne !");
+        printf("Vous avez gagne, fin du jeu !\n");
         Jeu = 0;
     }
 }
 
-/**
- * @brief Vérifie si la caisse peut être déplacée à la nouvelle position.
- *
- * @param level Tableau représentant le niveau.
- * @param rows Nombre de lignes dans le tableau.
- * @param cols Nombre de colonnes dans le tableau.
- * @param player Structure représentant le joueur.
- * @param tabCaisse Tableau de structures représentant les caisses.
- * @param x Nouvelle position en colonne.
- * @param y Nouvelle position en ligne.
- * @return 1 si la caisse peut être déplacée, 0 sinon.
- */
-int peutBougerCaisse(char level[MAX_ROWS][MAX_COLS], int rows, int cols, Player player, TabCaisse tabCaisse, int x, int y){
+
+int peutBougerCaisse(char level[MAX_ROWS][MAX_COLS], TabCaisse tabCaisse, int x, int y){
     // Vérifie si la caisse peut bouger
     if (level[y][x] == '#' || level[y][x] == 'C'){
         return 0;
