@@ -66,6 +66,11 @@ Il est également possible d'ajouter vos propres niveaux.
 
 #### Jeu (1er niveau) :
 ![App Screenshot](https://imgur.com/dtFHy0y.png)
+
+## BONUS
+
+Pour s'amuser, il y a une version bonus utilisant SDL disponible sur la branche SDL :)
+
 ## Auteurs
 
 - [@khafdi](https://git.unistra.fr/khafdi)
