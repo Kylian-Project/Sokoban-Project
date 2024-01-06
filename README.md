@@ -74,5 +74,5 @@ Pour s'amuser, il y a une version bonus utilisant SDL disponible sur la branche 
 ## Auteurs
 
 - [@khafdi](https://git.unistra.fr/khafdi)
-- [@kylian.gerard](https://git.unistra.fr/kylian.gerard)
+- [@kylian.gerard](https://github.com/Kylian-Project)
 - [@yayyildiz](https://git.unistra.fr/yayyildiz)
