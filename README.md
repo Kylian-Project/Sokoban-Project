@@ -24,7 +24,7 @@ Puis ce rendre dans le dossier `/bin` et le lancer avec `./sokoban`
 
 #### Crée une archive :
 ```bash
-  make clean
+  make archive
 ```
 
 **Prérequis :** Assurez vous d'avoir `doxygen` et `graphviz` sur votre machine.
